@@ -3,8 +3,8 @@
 Library of classes
 ==================
 
-:mod:`lib` -- Classes 'Question' and 'Applicant'
-===============================================
+:mod:`lib` -- Classes 'Question', 'Applicant', 'Match'
+=====================================================
 
 .. module:: lib
    :platform: Linux, Windows
