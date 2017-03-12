@@ -29,3 +29,18 @@ As with any project, there are some missing requirements or specifications:
     There is no UI designer.
 
     There is no database designer.
+    
+main.py: 'main' script, which is mostly testing functionality of the program
+lib.by: classes used for processing application and saving "employer's" questionnaire
+dynamoConn.py: functions used to connect to DynamoDB
+
+Briefly about the program:
+1. Creates an instance of questionnaire and checks its validity, then it can be written into the database
+2. Creates an instance of application
+3. Then Match instance detects passed/not passed
+4. The results are simply written into a file (a database can be used instead; the only information I save is names, so I decided to save to a file for now)
+
+Note. If you'd like to run it on your own:
+1. Create a table called 'Questions' with primary key 'list_id' (Number) in DynamoDB(AWS)
+2. In order to write into the database you need to uncomment calls to 'put_list_item' function in main.py. After you wrote the questionnaires into the database I recommend commenting the calls to 'put_list_item' again to avoid duplicates.
+3. Then clone the repository and run it with your own aws credentials
